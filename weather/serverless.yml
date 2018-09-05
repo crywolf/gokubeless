@@ -1,0 +1,13 @@
+service: weather
+
+provider:
+  name: kubeless
+  runtime: go1.10
+
+plugins:
+  - serverless-kubeless
+
+functions:
+  weather:
+    description: 'Shows weather at provided location'
+    handler: weather.Handler
